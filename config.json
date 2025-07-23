@@ -1,0 +1,48 @@
+{
+    "mcu": "STM32F407TA",
+    "core-type": "ARM Cortex M4F",
+    "Floating point": "True",
+    "peripherals": {
+      "gpio": [
+        {
+          "pin": "PA5",
+          "direction": "output",
+          "pull": "none",
+          "speed": "high",
+          "alt_function": ["I2C_SDA","SPI_MOSI","UART_TX","USB_D+"]
+        },
+        {
+          "pin": "PB0",
+          "direction": "input",
+          "pull": "up",
+          "speed": "low",
+          "alt_function": ["I2C_SDA","SPI_MOSI","UART_TX","USB_D+"]
+        }
+      ],
+      "uart": [
+        {
+          "interface": "USART2",
+          "baudrate": 115200,
+          "tx_pin": "PA2",
+          "rx_pin": "PA3",
+          "parity": "none"
+        }
+      ],
+      "i2c": [
+        {
+          "interface": "I2C1",
+          "scl_pin": "PB6",
+          "sda_pin": "PB7",
+          "speed": "400kHz"
+        }
+      ],
+      "timers": [
+        {
+          "timer": "TIM1",
+          "prescaler": 16,
+          "frequency": "1MHz",
+          "mode": "counter"
+        }
+      ]
+    }
+  }
